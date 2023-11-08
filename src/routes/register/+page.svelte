@@ -1,30 +1,51 @@
 <script lang="ts">
+import supabase from '../supabaseClient.js'
+let username = '';
+let pw = '';
+let pw2 = '';
+let mail = '';
 
+async function submitForm() {
+    if(pw == pw2){
+        const { data, error } = await supabase
+      .from('User')
+      .insert([
+        { username: username, pw: pw, mail: mail},
+      ])
+
+      if (error) {
+          console.error('Error sending data to Supabase:', error)
+        } else {
+          console.log('Data sent successfully:', data)
+        }
+    }
+    else console.log("prosím zadejte stejná hesla");
+ }
 </script>
-
+<form on:submit|preventDefault={submitForm}>
 <div class="login">
     <div class="nadpis">
         <h1>Registrace</h1>
     </div>
     <div class="name">
-        <input type="text" placeholder="Zvolte si přihlašovací jméno">
+        <input type="text" id="name" bind:value={username} required placeholder="Zvolte si přihlašovací jméno"/>
     </div>
     <div class="name">
-        <input type="text" placeholder="Zvolte si heslo">
+        <input type="text" id="pw" bind:value={pw} required placeholder="Zvolte si heslo"/>
     </div>
     <div class="name">
-        <input type="text" placeholder="Zopakujte vaše heslo">
+        <input type="text" id="pw2" bind:value={pw2} required placeholder="Zopakujte vaše heslo"/>
     </div>
     <div class="name">
-        <input type="text" placeholder="Zadejte Váš email">
+        <input type="text" id="email" bind:value={mail} required placeholder="Zadejte Váš email"/>
     </div>
     <div class="buttons">
         <a href="/">Přihlásit</a>
-        <a href="/">Registrovat</a>
+        <button type="submit" >Registrovat</button>
         <a href="/">Zapomenuté heslo</a>
     </div>
 </div>
-
+</form>
 <style lang="stylus">
 
     .login

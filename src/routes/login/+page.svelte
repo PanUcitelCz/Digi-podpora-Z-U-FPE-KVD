@@ -1,22 +1,44 @@
 <script lang="ts">
 
-</script>
+import supabase from '../supabaseClient.js'
+let username = '';
+let pw = '';
 
+async function submitForm() {
+    const { data, error } = await supabase
+      .from('User')
+      .insert([
+        { username: username, pw: pw },
+      ])
+
+    if (error) {
+      console.error('Error sending data to Supabase:', error)
+    } else {
+      console.log('Data sent successfully:', data)
+    }
+ }
+
+</script>
+<div>
+<form on:submit|preventDefault={submitForm}>
 <div class="login">
     <div class="nadpis">
         <h1>Přihlášení</h1>
     </div>
     <div class="name">
-        <input type="text" placeholder="Přihlašovací jméno">
+        <label for="name">Username</label>
+        <input type="text" id="name" bind:value={username} required/>
     </div>
     <div class="name">
-        <input type="text" placeholder="Heslo">
+        <label for="password">Password:</label>
+        <input type="password" id="password" bind:value={pw} required/>
     </div>
     <div class="buttons">
-        <a href="/">Přihlásit</a>
+        <a href="/"><button type="submit">Login</button></a>
         <a href="/register">Registrovat</a>
         <a href="/">Zapomenuté heslo</a>
     </div>
+</form>
 </div>
 
 <style lang="stylus">

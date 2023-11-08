@@ -36,7 +36,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/login">Přihlášení</a></li>
-                <li><a href="/">Registrace</a></li>
+                <li><a href="/register">Registrace</a></li>
             </ul>
         </nav>
     </div>
