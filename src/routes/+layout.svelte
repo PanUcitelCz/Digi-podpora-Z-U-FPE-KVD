@@ -4,7 +4,7 @@
 </script>
 
 <Header />
-<main>
+<main class="Main">
 	<slot />
 </main>
 <svelte:head>
@@ -18,13 +18,11 @@
 
 <style lang="stylus">
 	
-	body
+	:global(body)
 		margin 0
 		padding 0
 
-	main
-		display flex
-		justify-content center
+	.Main
 		margin 30px 0
 
 </style>

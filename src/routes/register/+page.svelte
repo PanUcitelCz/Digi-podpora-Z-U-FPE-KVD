@@ -4,17 +4,23 @@
 
 <div class="login">
     <div class="nadpis">
-        <h1>Přihlášení</h1>
+        <h1>Registrace</h1>
     </div>
     <div class="name">
-        <input type="text" placeholder="Přihlašovací jméno">
+        <input type="text" placeholder="Zvolte si přihlašovací jméno">
     </div>
     <div class="name">
-        <input type="text" placeholder="Heslo">
+        <input type="text" placeholder="Zvolte si heslo">
+    </div>
+    <div class="name">
+        <input type="text" placeholder="Zopakujte vaše heslo">
+    </div>
+    <div class="name">
+        <input type="text" placeholder="Zadejte Váš email">
     </div>
     <div class="buttons">
         <a href="/">Přihlásit</a>
-        <a href="/register">Registrovat</a>
+        <a href="/">Registrovat</a>
         <a href="/">Zapomenuté heslo</a>
     </div>
 </div>
@@ -72,5 +78,4 @@
 
                 &:hover
                     background purple
-
 </style>
