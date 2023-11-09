@@ -37,6 +37,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/login">Přihlášení</a></li>
                 <li><a href="/register">Registrace</a></li>
+                <li><a href="/account">Můj profil</a></li>
             </ul>
         </nav>
     </div>

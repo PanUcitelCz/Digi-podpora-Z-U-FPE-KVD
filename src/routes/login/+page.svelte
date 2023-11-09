@@ -26,7 +26,7 @@ async function submitForm() {
         <h1>Přihlášení</h1>
     </div>
     <div class="name">
-        <label for="name">Username</label>
+        <label for="name">Username: </label>
         <input type="text" id="name" bind:value={username} required/>
     </div>
     <div class="name">
@@ -34,7 +34,7 @@ async function submitForm() {
         <input type="password" id="password" bind:value={pw} required/>
     </div>
     <div class="buttons">
-        <a href="/"><button type="submit">Login</button></a>
+        <button type="submit">Login</button>
         <a href="/register">Registrovat</a>
         <a href="/">Zapomenuté heslo</a>
     </div>
@@ -94,5 +94,19 @@ async function submitForm() {
 
                 &:hover
                     background purple
+
+        button
+            border 1px solid black
+            padding 10px
+            background-color red
+            color white
+            text-decoration none
+            border-radius 5px
+            transition background .6s ease
+            
+            &:hover
+                background purple
+    label
+        color white
 
 </style>

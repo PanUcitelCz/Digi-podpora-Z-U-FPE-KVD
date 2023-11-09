@@ -31,10 +31,10 @@ async function submitForm() {
         <input type="text" id="name" bind:value={username} required placeholder="Zvolte si přihlašovací jméno"/>
     </div>
     <div class="name">
-        <input type="text" id="pw" bind:value={pw} required placeholder="Zvolte si heslo"/>
+        <input type="password" id="pw" bind:value={pw} required placeholder="Zvolte si heslo"/>
     </div>
     <div class="name">
-        <input type="text" id="pw2" bind:value={pw2} required placeholder="Zopakujte vaše heslo"/>
+        <input type="password" id="pw2" bind:value={pw2} required placeholder="Zopakujte vaše heslo"/>
     </div>
     <div class="name">
         <input type="text" id="email" bind:value={mail} required placeholder="Zadejte Váš email"/>
@@ -99,4 +99,15 @@ async function submitForm() {
 
                 &:hover
                     background purple
+     button
+            border 1px solid black
+            padding 10px
+            background-color red
+            color white
+            text-decoration none
+            border-radius 5px
+            transition background .6s ease
+            
+            &:hover
+                background purple
 </style>
