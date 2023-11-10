@@ -1,5 +1,5 @@
 <script lang="ts">
-let username = '';//bind:value={username}
+let username = '';
 let pw = '';
 let pw2 = '';
 let mail = '';
@@ -17,9 +17,7 @@ async function submitForm(eve: any) {
         headers: {
             'Content-Type': 'application/json'
         }})
-
         let res =  await response.json();
-        //console.log(res+" dsfsfd1212123123123312321312321321312");
  }
 
 </script>
