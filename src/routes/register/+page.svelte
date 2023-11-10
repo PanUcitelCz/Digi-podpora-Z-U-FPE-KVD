@@ -1,28 +1,29 @@
 <script lang="ts">
-import supabase from '../supabaseClient.js'
-let username = '';
+let username = '';//bind:value={username}
 let pw = '';
 let pw2 = '';
 let mail = '';
 
-async function submitForm() {
-    if(pw == pw2){
-        const { data, error } = await supabase
-      .from('User')
-      .insert([
-        { username: username, pw: pw, mail: mail},
-      ])
+function test(){
+    let toJSON = '{"username":"'+username+'","pw":"'+pw+'","mail":"'+mail+'"}';
+    let event = JSON.parse(toJSON);
+    submitForm(event);
+}
 
-      if (error) {
-          console.error('Error sending data to Supabase:', error)
-        } else {
-          console.log('Data sent successfully:', data)
-        }
-    }
-    else console.log("prosím zadejte stejná hesla");
+async function submitForm(eve: any) {
+    const response = await fetch("../api/getstate",{
+        method: 'POST',
+        body: JSON.stringify({eve}),
+        headers: {
+            'Content-Type': 'application/json'
+        }})
+
+        let res =  await response.json();
+        //console.log(res+" dsfsfd1212123123123312321312321321312");
  }
+
 </script>
-<form on:submit|preventDefault={submitForm}>
+<form on:submit|preventDefault={() => test()}>
 <div class="login">
     <div class="nadpis">
         <h1>Registrace</h1>

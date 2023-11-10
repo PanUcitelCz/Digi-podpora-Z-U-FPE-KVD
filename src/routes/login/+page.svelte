@@ -1,26 +1,13 @@
 <script lang="ts">
 
-import supabase from '../supabaseClient.js'
 let username = '';
 let pw = '';
 
-async function submitForm() {
-    const { data, error } = await supabase
-      .from('User')
-      .insert([
-        { username: username, pw: pw },
-      ])
 
-    if (error) {
-      console.error('Error sending data to Supabase:', error)
-    } else {
-      console.log('Data sent successfully:', data)
-    }
- }
 
 </script>
 <div>
-<form on:submit|preventDefault={submitForm}>
+<form>
 <div class="login">
     <div class="nadpis">
         <h1>Přihlášení</h1>
