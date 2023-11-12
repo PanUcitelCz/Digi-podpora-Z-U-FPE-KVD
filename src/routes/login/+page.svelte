@@ -3,8 +3,14 @@
 let username = '';
 let pw = '';
 
-let n = window.sessionStorage;
-console.log(n.getItem("username"));
+try{
+    let n = window.sessionStorage;
+    console.log(n.getItem("username"));
+}
+catch(error){
+    
+}
+
 
 </script>
 <div>
