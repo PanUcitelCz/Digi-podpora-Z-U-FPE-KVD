@@ -20,19 +20,17 @@
     </div>
         
     <div class="info">
-        <div class="info">
-            <div class="inputs">
-                <label for="input">Stávající heslo</label>
-                <input type="text">
-            </div>
-            <div class="inputs">
-                <label for="input">Nové heslo</label>
-                <input type="text">
-            </div>
-            <div class="inputs">
-                <label for="input">Zadejte znovu nové heslo</label>
-                <input type="text">
-            </div>
+        <div class="inputs">
+            <label for="input">Stávající heslo</label>
+            <input type="text">
+        </div>
+        <div class="inputs">
+            <label for="input">Nové heslo</label>
+            <input type="text">
+        </div>
+        <div class="inputs">
+            <label for="input">Zadejte znovu nové heslo</label>
+            <input type="text">
         </div>
     </div>
     <div class="tlacitka">
@@ -57,19 +55,21 @@
             grid-column-gap 0px
             grid-row-gap 0px
 
-        .infor
-            display flex
-            flex-direction column
-            align-items flex-start
-
-            .inputs
-                width 100%
+            .infor
                 display flex
+                flex-direction column
+                align-items flex-start
                 justify-content center
-                margin 5px 0
+                width 100%
 
-                label
-                    width 130px
+                .inputs
+                    width 300px
+                    display flex
+                    justify-content center
+                    margin 5px 0
+
+                    label
+                        width 130px
 
         .tlacitka
             width 100%
@@ -84,6 +84,7 @@
         border-bottom 2px solid red
         background-color #113946
         color white
+        width 100%
 
         &:focus
             border-bottom 2px solid red
@@ -95,6 +96,11 @@
         justify-content space-between
         flex-direction row
         width 100%
+        margin 5px
+
+        .inputs
+            width 180px
+            margin 5px 0
 
     a
         border 1px solid black
