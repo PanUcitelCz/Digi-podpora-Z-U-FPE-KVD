@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
+import Header from '$lib/components/Header.svelte';
 	import '../lib/css/normallize.css';
 </script>
 
@@ -16,13 +17,17 @@
 	/>
 </svelte:head>
 
+<Footer />
+
 <style lang="stylus">
 	
 	:global(body)
 		margin 0
 		padding 0
+		font-family 'Bricolage Grotesque', sans-serif
 
 	.Main
-		margin 30px 0
+		margin 30px auto
+		max-width 1300px
 
 </style>
