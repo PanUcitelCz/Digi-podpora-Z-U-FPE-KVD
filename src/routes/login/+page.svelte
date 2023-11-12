@@ -3,7 +3,8 @@
 let username = '';
 let pw = '';
 
-
+let n = window.sessionStorage;
+console.log(n.getItem("username"));
 
 </script>
 <div>

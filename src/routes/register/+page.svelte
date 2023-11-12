@@ -11,13 +11,16 @@ function test(){
 }
 
 async function submitForm(eve: any) {
+    let n = window.sessionStorage;
     const response = await fetch("../api/getstate",{
         method: 'POST',
         body: JSON.stringify({eve}),
         headers: {
             'Content-Type': 'application/json'
         }})
-        let res =  await response.json();
+        await response.json().then();
+        n.setItem("username",username);
+        console.log(n.getItem("username")+" dostává se to na konec");
  }
 
 </script>
