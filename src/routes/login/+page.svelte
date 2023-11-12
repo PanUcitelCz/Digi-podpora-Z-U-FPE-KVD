@@ -3,6 +3,13 @@
 let username = '';
 let pw = '';
 
+try{
+    let n = window.sessionStorage;
+    console.log(n.getItem("username"));
+}
+catch(error){
+    
+}
 
 
 </script>
