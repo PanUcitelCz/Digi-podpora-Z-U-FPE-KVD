@@ -55,8 +55,11 @@ async function submitForm(eve: any) {
         padding 16px
         border-radius 5px
         max-width 750px
-        margin 30px auto
-        
+        margin 10px
+
+        @media $medium-up
+            margin 10px auto 
+               
         .nadpis
             display flex
             justify-content center
@@ -87,7 +90,13 @@ async function submitForm(eve: any) {
         .buttons
             display flex
             justify-content center
+            flex-direction column
             gap 16px
+
+            @media $small-wide-up
+                justify-content center
+                flex-direction row
+
 
 
             a
@@ -98,7 +107,9 @@ async function submitForm(eve: any) {
                 text-decoration none
                 border-radius 5px
                 transition background .6s ease
+                text-align center
 
+                
                 &:hover
                     background purple
      button

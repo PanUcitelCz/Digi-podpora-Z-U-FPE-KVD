@@ -24,10 +24,19 @@
 
         div
             display flex
-            justify-content space-between 
-            font-weight bold
-            max-width 1300px
-            margin auto
+            flex-direction column
+            justify-content center
             text-align center
+            margin 10px
+            font-weight bold
+            @media $small-wide-up
+
+                justify-content space-between 
+                flex-direction row
+                
+                max-width 1300px
+                margin auto
+                text-align center
+                margin 0 16px
 
 </style>

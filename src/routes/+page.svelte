@@ -18,6 +18,12 @@
     </Card>
 </div>
 
+<div class="content">
+    <p>
+        Vítejte na naší inspirativní platformě pro učitele! Procházejte naším bohatým výběrem aplikací, které oživí vaše výukové metody. Každá aplikace je doplněna podrobným popisem, abyste mohli snadno najít ty nejvhodnější nástroje pro vaše hodiny. Zaregistrujte se a získejte možnost přidávat vlastní objevy, které mohou inspirovat ostatní učitele. Společně můžeme vytvořit dynamickou komunitu, sdílející nejlepší praktiky a inovace ve výuce. Připojte se k nám a buďte součástí této inspirativní vzdělávací cesty!
+    </p>
+</div>
+
 <style lang="stylus">
 
     .grid
@@ -30,4 +36,14 @@
         grid-template-columns repeat(auto-fit, minmax(320px, 1fr))
         grid-column-gap 21px
         grid-row-gap 21px
+
+    
+    .content
+        background green
+        padding 10px
+        margin 10px
+        
+        p
+            color white
+            text-align justify
 </style>
