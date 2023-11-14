@@ -5,7 +5,7 @@ let pw2 = '';
 let mail = '';
 
 function test(){
-    let toJSON = '{"username":"'+username+'","pw":"'+pw+'","mail":"'+mail+'"}';
+    let toJSON = '{"postID":"'+1+'","username":"'+username+'","pw":"'+pw+'","mail":"'+mail+'"}';
     let event = JSON.parse(toJSON);
     submitForm(event);
 }
@@ -17,8 +17,9 @@ async function submitForm(eve: any) {
         body: JSON.stringify({eve}),
         headers: {
             'Content-Type': 'application/json'
-        }})
-        await response.json().then();
+        }}).then((responce)=>{
+            console.log(responce);
+        })
         n.setItem("username",username);
         console.log(n.getItem("username")+" dostává se to na konec");
  }
