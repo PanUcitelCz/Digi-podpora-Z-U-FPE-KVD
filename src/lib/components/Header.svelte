@@ -50,7 +50,7 @@
         justify-content center
         width 100%
         height 96px
-        background-color #113946
+        background-color #27374D
 
         &-wrapper
             position relative
@@ -70,7 +70,7 @@
                 left 50%
                 width 100%
                 height 100%
-                background-color #113946
+                background-color #27374D
                 transform translateX(-50%)
 
                 @media only screen and (min-width 991px)
@@ -114,7 +114,7 @@
                 margin 0
                 padding 24px
                 padding-top 108px
-                background #113946
+                background #27374D
 
                 @media only screen and (min-width: 991px)
                     gap 12px

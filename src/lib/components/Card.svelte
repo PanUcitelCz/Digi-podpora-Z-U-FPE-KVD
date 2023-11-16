@@ -31,7 +31,7 @@
                 opacity 0
 
             .Card-heading
-                background #5D5D5D
+                background #9DB2BF
                 top 0
                 transform translateY(0)
 

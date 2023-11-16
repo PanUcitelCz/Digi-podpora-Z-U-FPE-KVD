@@ -18,9 +18,9 @@
 
 <style lang="stylus">
     footer
-        background red
+        background #DDE6ED
         padding 20px
-        color white
+        color black
 
         div
             display flex
