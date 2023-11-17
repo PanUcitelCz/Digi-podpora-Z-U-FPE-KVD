@@ -17,12 +17,12 @@ async function submitForm(eve: any) {
         body: JSON.stringify({eve}),
         headers: {
             'Content-Type': 'application/json'
-        }}).then((responce)=>{
-            console.log(responce);
-        })
-        n.setItem("username",username);
-        console.log(n.getItem("username")+" dostává se to na konec");
- }
+        }})
+        var test = await response.json();
+        if(test){
+            n.setItem("username",username);
+        }
+    }
 
 </script>
 <form on:submit|preventDefault={() => test()}>

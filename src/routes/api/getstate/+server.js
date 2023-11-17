@@ -3,14 +3,28 @@ import { mysqlconnFn } from "$lib/db/mysql";
 //import { json } from "@sveltejs/kit";
 export  async function POST({request}) {
   let mysqlconn = await mysqlconnFn();
+  let responce = new Response(JSON.stringify(true), {
+    headers: { 'Content-Type': 'application/json' },
+  });
 await request.json().then((data)=>{
-  console.log(data.eve.username+" "+data.eve.pw+" "+data.eve.mail);
-  mysqlconn.query("INSERT INTO user (Username, PW, Email) VALUES ('"+data.eve.username+"', '"+data.eve.pw+"', '"+data.eve.mail+"')");
+  
+  switch(data.eve.postID){
+    case "1":
+      try{
+        mysqlconn.query("INSERT INTO user (Username, PW, Email) VALUES ('"+data.eve.username+"', '"+data.eve.pw+"', '"+data.eve.mail+"')");
+      }
+      catch(error){
+        responce = new Response(JSON.stringify(false), {
+          headers: { 'Content-Type': 'application/json' },
+        });
+      }
+      break;
+    case "2":
+      //TODO login
+      break;
+  }
 });
-const responce = new Response(JSON.stringify(true), {
-  headers: { 'Content-Type': 'application/json' },
-});
-
+console.log("fin");
  return responce;
 }
 
