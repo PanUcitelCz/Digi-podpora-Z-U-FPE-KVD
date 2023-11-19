@@ -3,15 +3,14 @@
 </script>
 
 <footer>
-    <div>
-        <div>
-            Západočeská univerzita v Plzni
+    <div class="wrapper">
+        <div class="inf">
+            <div class="text">Západočeská univerzita</div>
+            <div class="text">Fakulta pedagogická</div>
+            <div class="text">Katedra výpočetní a didaktické tecnniky</div>
         </div>
-        <div>
-            Katedra výpočetní a didaktické techniky
-        </div>
-        <div>
-            Fakulta pedagogická
+        <div class="logo">
+            <img src="images/FPE_ZČU_(cmyk).png" alt="">
         </div>
     </div>
 </footer>
@@ -19,24 +18,43 @@
 <style lang="stylus">
     footer
         background #DDE6ED
-        padding 20px
-        color black
+        padding 36px
+        display flex
+        justify-content center
 
-        div
+        .wrapper
+            max-width 1300px
+            width 1300px
             display flex
             flex-direction column
-            justify-content center
-            text-align center
-            margin 10px
-            font-weight bold
-            @media $small-wide-up
+            
+            .inf
+                display flex
+                flex-direction column
+                border-bottom 1px solid black
+                justify-content space-between
+                width 100%
 
-                justify-content space-between 
-                flex-direction row
+                @media $large-up
+                    flex-direction row
+
                 
-                max-width 1300px
-                margin auto
+            
+            .text
+                padding 21px
+                font-weight bold
                 text-align center
-                margin 0 16px
+            
+            .logo
+                display flex
+                justify-content center
+                width 100%
+
+                img
+                    width 300px
+                    
+            
+
+        
 
 </style>

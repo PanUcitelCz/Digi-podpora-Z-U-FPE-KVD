@@ -24,4 +24,5 @@
         align-items center
         margin 10px 10px
         flex-direction column
+        text-align justify
 </style>

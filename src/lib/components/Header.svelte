@@ -25,7 +25,7 @@
 <header class="Header">
     <div class="Header-wrapper">
         <div class="Header-logo">
-            <img src="images/FPE_ZČU_(cmyk).png" alt="" />
+            <img src="" alt="">
         </div>
         <button class="Hamburger" class:isOpen on:click={changeOpenState}>
             <span class="Hamburger-stick" />

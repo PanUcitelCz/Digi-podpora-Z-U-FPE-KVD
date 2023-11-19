@@ -32,14 +32,4 @@
         grid-template-columns repeat(auto-fit, minmax(320px, 1fr))
         grid-column-gap 21px
         grid-row-gap 21px
-
-    
-    .content
-        background green
-        padding 10px
-        margin 10px
-        
-        p
-            color white
-            text-align justify
 </style>
