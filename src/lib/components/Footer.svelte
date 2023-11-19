@@ -44,6 +44,8 @@
                 padding 21px
                 font-weight bold
                 text-align center
+                width 100%
+                
             
             .logo
                 display flex
