@@ -5,9 +5,11 @@ let pw2 = '';
 let mail = '';
 
 function test(){
-    let toJSON = '{"postID":"'+1+'","username":"'+username+'","pw":"'+pw+'","mail":"'+mail+'"}';
-    let event = JSON.parse(toJSON);
-    submitForm(event);
+    if(pw==pw2){
+        let toJSON = '{"postID":"'+1+'","username":"'+username+'","pw":"'+pw+'","mail":"'+mail+'"}';
+        let event = JSON.parse(toJSON);
+        submitForm(event);
+    }  
 }
 
 async function submitForm(eve: any) {
@@ -19,8 +21,9 @@ async function submitForm(eve: any) {
             'Content-Type': 'application/json'
         }})
         var test = await response.json();
-        if(test){
+        if(test.succ){
             n.setItem("username",username);
+            console.log("zaregistrován nový uživatel "+username);
         }
     }
 

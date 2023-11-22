@@ -3,18 +3,26 @@
 let username = '';
 let pw = '';
 
-try{
+async function submitform(){
     let n = window.sessionStorage;
-    console.log(n.getItem("username"));
+    let toJSON = '{"postID":"'+2+'","username":"'+username+'","pw":"'+pw+'"}';
+    let eve = JSON.parse(toJSON);
+    const response = await fetch("../api/getstate",{
+        method: 'POST',
+        body: JSON.stringify({eve}),
+        headers: {
+            'Content-Type': 'application/json'
+        }})
+        var test = await response.json();
+        if(test.succ){
+            n.setItem("username",test.username);
+            console.log("zaregistrován nový uživatel "+test.username);
+        }
 }
-catch(error){
-    
-}
-
 
 </script>
 <div>
-<form>
+<form on:submit|preventDefault={() => submitform()}>
 <div class="login">
     <div class="nadpis">
         <h1>Přihlášení</h1>
