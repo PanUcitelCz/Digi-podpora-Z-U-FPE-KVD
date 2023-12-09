@@ -1,6 +1,19 @@
 <script lang="ts">
 	import Card from "$components/Card.svelte";
 
+    let items = [
+		{ value: 'Free', label: 'Freeware'},
+		{ value: 'Adroid', label: 'Android'},
+		{ value: 'IOS', label: 'Apple OS' },
+		{ value: 'Web', label: 'Online aplikace' }
+	];
+	
+	let selectedItem;
+	
+	const handleInput = (event: { target: { value: string; }; }) => {
+		selectedItem = items.find((item) => event.target.value === item.value);
+	}
+
 </script>
 
 <div class="lista">
@@ -9,8 +22,14 @@
         <button>Hledej</button>
     </div>
     <div class="vyber">
-        <div class="">
-
+        <div class="widnow">
+            <label for="vyber">Typ aplikace</label>
+            <input list="list" on:input="{handleInput}">
+            <datalist id="list">
+                {#each items as item}
+                   <option value="{item.value}">{item.label}</option>
+                {/each}
+             </datalist>
         </div>
     </div>
 </div>
@@ -41,6 +60,9 @@
         display flex
         justify-content space-between
         align-items center
+
+        label
+            color white
 
     .grid
         margin 0 auto
