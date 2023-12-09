@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Card from "$components/Card.svelte";
 
-
 </script>
 
 <div class="lista">
@@ -34,8 +33,8 @@
 <style lang="stylus">
     
     .lista
-        width 90%
-        margin  auto
+        max-width 1300px
+        margin  10px
         background-color #526D82
         padding 16px
         border-radius 10px
@@ -53,5 +52,4 @@
         grid-template-columns repeat(auto-fit, minmax(320px, 1fr))
         grid-column-gap 21px
         grid-row-gap 21px
-
 </style>
