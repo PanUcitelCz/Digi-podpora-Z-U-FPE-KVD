@@ -41,7 +41,7 @@
                 
             
             .text
-                padding 21px
+                padding 21px 0
                 font-weight bold
                 text-align center
                 width 100%

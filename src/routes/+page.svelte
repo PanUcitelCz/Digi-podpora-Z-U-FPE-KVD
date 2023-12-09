@@ -9,7 +9,7 @@
     Vítejte na naší inspirativní platformě pro učitele! Procházejte naším bohatým výběrem aplikací, které oživí vaše výukové metody. Každá aplikace je doplněna podrobným popisem, abyste mohli snadno najít ty nejvhodnější nástroje pro vaše hodiny. Zaregistrujte se a získejte možnost přidávat vlastní objevy, které mohou inspirovat ostatní učitele. Společně můžeme vytvořit dynamickou komunitu, sdílející nejlepší praktiky a inovace ve výuce. Připojte se k nám a buďte součástí této inspirativní vzdělávací cesty!
 </Card_h1>
 <div class="grid">
-    <Card href="/" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w" >
+    <Card href="/app_podpora" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w" >
         Online aplikace pro podporu výuky
     </Card>
     <Card href="/" src="https://ilikeit2.eu/wp-content/uploads/2022/02/Remote-working-1024x681-1-900x599-1.jpg" >
