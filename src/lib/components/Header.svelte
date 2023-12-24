@@ -92,7 +92,7 @@
             left 0
             width 100%
             transform translateY(-100%)
-            transition transform .6s ease
+            transition transform .3s ease
 
             @media only screen and (min-width: 991px)
                 position static

@@ -1,35 +1,35 @@
 <script lang="ts">
-	import Card from "$components/Card.svelte";
+    import Card from "$components/Card.svelte";
 
-    let items = [
-		{ value: 'Free', label: 'Freeware'},
-		{ value: 'Adroid', label: 'Android'},
-		{ value: 'IOS', label: 'Apple OS' },
-		{ value: 'Web', label: 'Online aplikace' }
-	];
-	
-	let selectedItem;
-	
-	const handleInput = (event: { target: { value: string; }; }) => {
-		selectedItem = items.find((item) => event.target.value === item.value);
-	}
-
+    let typ_active = [false, false, false, false];
+    
+    const active = (index: number) => {
+        typ_active[index] = !typ_active[index];
+    }
 </script>
 
 <div class="lista">
     <div class="search">
-        <input type="search">
+        <input type="search" placeholder="Zadejte název aplikace">
         <button>Hledej</button>
     </div>
     <div class="vyber">
-        <div class="widnow">
-            <label for="vyber">Typ aplikace</label>
-            <input list="list" on:input="{handleInput}">
-            <datalist id="list">
-                {#each items as item}
-                   <option value="{item.value}">{item.label}</option>
-                {/each}
-             </datalist>
+        <div class="container">
+            {#each [0, 1, 2, 3] as index}
+                <!-- svelte-ignore a11y-no-static-element-interactions -->
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <div class="typ_aplikace" class:typ_active={typ_active[index]} on:click={() => active(index)}>
+                    {#if index === 0}
+                        Android
+                    {:else if index === 1}
+                        IOS
+                    {:else if index === 2}
+                        Online aplikace
+                    {:else}
+                        Free
+                    {/if}
+                </div>
+            {/each}
         </div>
     </div>
 </div>
@@ -60,9 +60,24 @@
         display flex
         justify-content space-between
         align-items center
+        flex-direction column
 
-        label
-            color white
+        .container
+            display flex
+            gap 10px
+            margin 10px 0
+
+        .typ_aplikace
+            background-color white
+            color #6F6F6F
+            border-radius white
+            padding 10px
+            border-radius 20px
+            cursor pointer
+            transition .5s ease
+            
+        .typ_active
+            background-color red
 
     .grid
         margin 0 auto
