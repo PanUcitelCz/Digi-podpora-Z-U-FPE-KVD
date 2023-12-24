@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Card from "$components/Card.svelte";
 
     let typ_active = [false, false, false, false];
     
@@ -35,18 +34,7 @@
 </div>
 
 <div class="grid">
-    <Card href="/app_podpora" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w">
-        Test
-    </Card>
-    <Card href="/app_podpora" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w">
-        Test
-    </Card>
-    <Card href="/app_podpora" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w">
-        Test
-    </Card>
-    <Card href="/app_podpora" src="https://images.squarespace-cdn.com/content/v1/5892601aff7c50aa7531c614/1635885429629-HE3D3I1QMOT6PR3AUBD1/student+sketching+Spatial+Vis+iPad+app.jpg?format=2500w">
-        Test
-    </Card>
+    
 </div>
 
 <style lang="stylus">
